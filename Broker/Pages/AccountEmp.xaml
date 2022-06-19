@@ -1,0 +1,47 @@
+﻿<Page x:Class="Broker.Pages.AccountEmp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Broker.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountEmp">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock Name="FullName" FontSize="25"/>
+        </StackPanel>
+        <TabControl Grid.Column="1">
+            <TabItem Name="Menu">
+                <TabItem.Header>
+                    <StackPanel>
+                        <Ellipse Height="15" Width="15" Fill="Magenta"/>
+                        <TextBlock Text="Меню"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Button Content="провести IPO" Name="Eidt"/>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Name="watch">
+                <TabItem.Header>
+                    <StackPanel>
+                        <Ellipse Height="15" Width="15" Fill="Bisque"/>
+                        <TextBlock Text="Работа"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Button Content="смотреть активные сделки" Name="See"/>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

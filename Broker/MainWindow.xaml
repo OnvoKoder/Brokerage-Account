@@ -1,0 +1,22 @@
+﻿<Window x:Class="Broker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Broker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Image Source="Resources/logo.png" HorizontalAlignment="Left"/>
+        <TextBlock Text="Финансовая биржа" Style="{StaticResource MainStyle}" Margin="0 20 0 0" HorizontalAlignment="Center"/>
+        <Button Width="150" Height="50" Content="Назад" HorizontalAlignment="Right" Margin="0" Click="BackClick" Name="Back"/>
+        <Grid Style="{StaticResource MainStyle}" Panel.ZIndex="-1"/>
+        <Grid Grid.Row="2" Style="{StaticResource MainStyle}"/>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="OrigFrame_ContentRendered" Grid.Row="1" Name="OrigFrame"/>
+    </Grid>
+</Window>

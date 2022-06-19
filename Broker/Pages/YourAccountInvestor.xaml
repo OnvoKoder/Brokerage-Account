@@ -1,0 +1,77 @@
+﻿<Page x:Class="Broker.Pages.YourAccount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Broker.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="YourAccount">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock Name="FullName" FontSize="25"/>
+        </StackPanel>
+        <StackPanel  Name="Watch"  Grid.Column="1" >
+            <TabControl>
+                <TabItem Name="Menu">
+                    <TabItem.Header>
+                        <StackPanel>
+                            <Ellipse Height="15" Width="15" Fill="Magenta"/>
+                            <TextBlock Text="Меню"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <StackPanel>
+                            <Button Content="Редактировать данные" Click="BtnEditClick" Name="Eidt"/>
+                            <Button Content="Купить/продать" Name="Purchase" Click="PurchaseClick"/>
+                        </StackPanel>
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem Name="WatchBroker" >
+                    <TabItem.Header>
+                        <StackPanel>
+                            <Ellipse Height="15" Width="15" Fill="GreenYellow"/>
+                            <TextBlock Text="Брокерский счет"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <StackPanel>
+                            <TextBlock Text="Валюта" Style="{StaticResource MainStyle}" HorizontalAlignment="Center"/>
+                            <ComboBox Name="Brokercmb" Width="400" FontSize="20">
+                                <ComboBoxItem Content="Доллары"/>
+                                <ComboBoxItem Content="Рубли"/>
+                                <ComboBoxItem Content="Евро"/>
+                            </ComboBox>
+                            <Button Content="Смотреть" Name="See" Click="SeeClick"/>
+                            <DataGrid Name="User" FontSize="15"/>
+                        </StackPanel>
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem Name="WatchMarket" >
+                    <TabItem.Header>
+                        <StackPanel>
+                            <Ellipse Height="15" Width="15" Fill="RoyalBlue"/>
+                            <TextBlock Text="Фондовая биржа"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <StackPanel>
+                            <TextBlock Text="Валюта" Style="{StaticResource MainStyle}" HorizontalAlignment="Center"/>
+                            <ComboBox Name="Marketcmb" Width="400" FontSize="20">
+                                <ComboBoxItem Content="Доллары"/>
+                                <ComboBoxItem Content="Рубли"/>
+                                <ComboBoxItem Content="Евро"/>
+                            </ComboBox>
+                            <Button Content="Смотреть" Name="View" Click="ViewClick"/>
+                            <DataGrid Name="Users" FontSize="15"/>
+                        </StackPanel>
+                    </TabItem.Content>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Grid>
+</Page>

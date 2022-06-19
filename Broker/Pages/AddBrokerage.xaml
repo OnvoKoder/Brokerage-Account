@@ -1,0 +1,27 @@
+﻿<Page x:Class="Broker.Pages.AddBrokerage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Broker.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddBrokerage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="Брокер" Style="{StaticResource MainStyle}"/>
+            <ComboBox Name="cmbbroker" FontSize="20" Width="600"/>
+            <TextBlock Text="Описание брокерского счета" Style="{StaticResource MainStyle}"/>
+            <TextBox Name="tbxDesc"/>
+            <TextBlock Text="Валюта(в долларах)" Style="{StaticResource MainStyle}"/>
+            <TextBox Name="tbxMoney"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button Content="открыть брокерский счет" Background="MediumPurple" Width="400" Name="Broker" Click="BrokerClick"/>
+        </StackPanel>
+        </Grid>
+</Page>
